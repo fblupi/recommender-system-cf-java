@@ -64,10 +64,10 @@ public class Users {
 
     /**
      * Get the k-nearest neighbourhoods using Pearson:
-     *   sim(i,j) = numerator / (sqrt(userDenominator^2) * sqrt(otherUserDenominator^2))
+     *   sim(i,j) = numerator / (sqrt(userDenominator) * sqrt(otherUserDenominator))
      *     numerator = sum((r(u,i) - r(u)) * (r(v,i) - r(v)))
-     *     userDenominator = sum(r(u,i) - r(i))
-     *     otherUserDenominator = sum(r(v,i) - r(v))
+     *     userDenominator = sum((r(u,i) - r(i))^2)
+     *     otherUserDenominator = sum((r(v,i) - r(v))^2)
      *     r(u,i): rating of the movie i by the user u
      *     r(u): average rating of the user u
      * @param userRatings ratings of the user
